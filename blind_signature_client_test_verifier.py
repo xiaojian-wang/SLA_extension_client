@@ -12,7 +12,7 @@ import sys
 sys.path.append('../structs/')
 sys.path.append('../../../structs/') # it should be the path that run this code, from SP.py or FA.py
 
-from fast_pow import *
+# from fast_pow import *
 
 import time
 import gmpy2
