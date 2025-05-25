@@ -7,6 +7,7 @@ from Crypto.Hash import SHA256
 import os
 import hashlib
 import random
+import pickle
 
 import sys
 sys.path.append('../structs/')
@@ -227,7 +228,9 @@ def write_to_file(filename, value):
 
 
 def token_generation(message, unblinded_signature):
-    token = str(message) + str(unblinded_signature)
+    # token = str(message) + "," + str(unblinded_signature)
+    # pickle them together
+    token = pickle.dumps((message, unblinded_signature))
     return token
 
 def main():
